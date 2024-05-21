@@ -9,20 +9,6 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 
-app.get("/", (req,res)=>{
-    const htmlResponse = `
-    <html>
-        <head>
-            <title>backend</title>
-        </head>
-        <body>
-            <h1> Ejecutando </h1>
-        </body>
-    </html>
-    `;
-    res.send(htmlResponse);
-})
-
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
